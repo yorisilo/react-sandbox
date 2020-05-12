@@ -83,6 +83,9 @@ const bd2 = new FlyableBird("スズメ");
 bd2.fly(); // スズメが飛びました
 ```
 
+> テンプレートリテラルをさらっと 差し込んでおいたんだけど、わかった?」
+> 「文字列を通常のシングルやダブルのクォートじゃなくバッククォートで囲んだ上で、変数名を ${} で囲うと値が展開されるやつですよね。Ruby でも #{} という書き方があったんでだいじょうぶです
+
 class vs function
 cf. [React.js - React での class と function の違い｜ teratail](https://teratail.com/questions/118890)
 
@@ -473,14 +476,12 @@ Flux: facebook が提唱しているアーキテクチャ。MVC, MVVM とかあ�
 React.createElement("h1", "Hello, world");
 ```
 
-変数の埋め込み
-
+jsx の変数の埋め込み
+`{}` で変数を囲むと値が展開される
 ```typescript
-{
-  {
-    title;
-  }
-}
+...
+<p>{title}</p>
+...
 ```
 
 if 文に相当: title が true 相当なら、 `<...>` を評価する
@@ -521,7 +522,7 @@ class App extends Component {
           }
           <img {...logoOptions} />
           {title && <p>{title}</p>}
-          {targets.map((target) => (
+          {targets.map(target => (
             <p>Hello, {target}!</p>
           ))}
         </header>
