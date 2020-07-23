@@ -6,7 +6,7 @@
 - updating
 - unmounting
 
-![](2020-07-08-todo.md_imgs/20200708_235939.png)
+![](react-hooks.md_imgs/20200723_185402.png)
 
 from react class to functional component
 
