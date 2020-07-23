@@ -695,6 +695,11 @@ const App: FC = () => {
 };
 ```
 
+> props は React.FC<Props> のようにジェネリックで書くことができます。children は React.FC でコンポーネント定義すると暗黙的に使えるようになります。つまり FC<React.ReactNode> = ({ children }) => ... みたいに書かなくて FC = ({ children }) => ... とするだけで良い。
+> React.FC で定義される children はオプショナルであり、型は React.ReactNode です。
+cf.
+- [TypeScript で書く React コンポーネントを基礎から理解する - Qiita](https://qiita.com/sangotaro/items/3ea63110517a1b66745b)
+
 
 ## state hook
 useState: クラスコンポーネント の local state に相当
